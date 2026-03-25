@@ -7,6 +7,25 @@ Projekt stosuje [Semantic Versioning](https://semver.org/lang/pl/).
 
 ---
 
+## [1.1.0] - 2026-03-25
+
+### Naprawiono
+- Błędna odmiana jedności przy złotych — "jedna/dwie" zmienione na "jeden/dwa" (rodzaj męski)
+- Błędna odmiana przy tysiącach — "dwie tysiące" zmienione na "dwa tysiące"
+- Błędna odmiana grosza dla wartości 0 i 1 — zawsze "groszy" dla zapisu ułamkowego
+- Błędne obliczanie groszy dla liczb zmiennoprzecinkowych (np. 0.01 dawało 00)
+- Overflow dla maksymalnych wartości (999 999 999,99) przy obliczaniu groszy
+- Błędne zaokrąglenie dla wartości typu 0.005 — teraz poprawnie 01/100 groszy
+- Błędna odmiana milionów — "dwie miliony" zmienione na "dwa miliony"
+- Błędna odmiana tysięcy dla 12000 — teraz poprawnie "dwanaście tysięcy"
+
+### Zmieniono
+- Obliczanie groszy przez typ `Currency` zamiast `Double` — eliminuje błędy zmiennoprzecinkowe
+- Każdy wyraz języka polskiego jako osobna funkcja — eliminuje problemy z kodowaniem ChrW()
+- Dodano 41 testów automatycznych w pliku `tests/testy_PL_TEKST.xlsx`
+
+---
+
 ## [1.0.0] - 2026-03-24
 
 ### Dodano
