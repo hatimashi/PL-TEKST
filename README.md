@@ -3,7 +3,7 @@
 > Polska funkcja VBA dla Microsoft Excel — zamiana liczb na tekst słowny w języku polskim.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](CHANGELOG.md)
 [![Excel](https://img.shields.io/badge/Microsoft%20Excel-2010%2B-green.svg)]()
 
 ---

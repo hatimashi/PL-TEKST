@@ -7,7 +7,7 @@ Projekt stosuje [Semantic Versioning](https://semver.org/lang/pl/).
 
 ---
 
-## [1.1.0] - 2026-03-25
+## [1.0.1] - 2026-03-25
 
 ### Naprawiono
 - Błędna odmiana jedności przy złotych — "jedna/dwie" zmienione na "jeden/dwa" (rodzaj męski)
