@@ -109,7 +109,7 @@ Private Function TrojkaSlownie(n As Integer, zenski As Boolean) As String
     TrojkaSlownie = wynik
 End Function
 
-Private Function LiczbaSlownie(n As Long) As String
+Public Function LiczbaSlownie(n As Long) As String
     Dim mln As Integer, tys As Integer, res As Integer
     Dim wynik As String
     wynik = ""
