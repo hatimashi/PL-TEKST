@@ -6,6 +6,30 @@ Format oparty na [Keep a Changelog](https://keepachangelog.com/pl/1.0.0/).
 Projekt stosuje [Semantic Versioning](https://semver.org/lang/pl/).
 
 ---
+
+## [2.1.0] - 2026-03-26
+
+### Dodano
+- Nowa funkcja `PL_TEKST_FAKTURA()` — pełny zapis słowny dla dokumentów prawnych
+- Obsługa wszystkich walut w `PL_TEKST_FAKTURA`: PLN, EUR, USD, GBP
+- Grosze/centy/pensy zapisywane słownie (nie jako ułamek)
+- Łącznik "i" między częścią główną a podrzędną (np. "tysiąc złotych i sześćdziesiąt siedem groszy")
+- Zero groszy zawsze zapisywane słownie ("i zero groszy")
+- Arkusz testowy dla `PL_TEKST_FAKTURA` — 53 testy w 4 zakładkach (PLN, EUR, USD, GBP)
+
+### Zmieniono
+- Funkcja `LiczbaSlownie()` w module `PL_TEKST` zmieniona z `Private` na `Public` — umożliwia współdzielenie między modułami
+- Zaktualizowano opis projektu w `README.md` — lepiej oddaje funkcjonalność dodatku
+
+### Przykład użycia
+```
+=PL_TEKST_FAKTURA(1234,67)        → Tysiąc dwieście trzydzieści cztery złote i sześćdziesiąt siedem groszy
+=PL_TEKST_FAKTURA(1234,67;"EUR")  → Tysiąc dwieście trzydzieści cztery euro i sześćdziesiąt siedem centów
+=PL_TEKST_FAKTURA(1234,67;"GBP")  → Tysiąc dwieście trzydzieści cztery funty i sześćdziesiąt siedem pensów
+```
+
+---
+
 ## [2.0.0] - 2026-03-26
 
 ### Dodano

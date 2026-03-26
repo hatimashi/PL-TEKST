@@ -1,9 +1,9 @@
 # PL-TEKST
 
-> Polska funkcja VBA dla Microsoft Excel — zamiana liczb na tekst słowny w języku polskim.
+> Darmowy dodatek VBA dla Microsoft Excel zamieniający kwoty pieniężne na pełny zapis słowny w języku polskim — z poprawną odmianą złotych, euro, dolarów i funtów. Przydatny przy wystawianiu faktur, umów i dokumentów finansowych.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](CHANGELOG.md)
 [![Excel](https://img.shields.io/badge/Microsoft%20Excel-2010%2B-green.svg)]()
 
 ---
