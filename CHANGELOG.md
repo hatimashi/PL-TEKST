@@ -6,6 +6,24 @@ Format oparty na [Keep a Changelog](https://keepachangelog.com/pl/1.0.0/).
 Projekt stosuje [Semantic Versioning](https://semver.org/lang/pl/).
 
 ---
+## [2.0.0] - 2026-03-26
+
+### Dodano
+- Obsługa wielu walut — nowy opcjonalny parametr: `=PL_TEKST(kwota; "EUR")`
+- Obsługa EUR — euro/euro/euro + cent/centy/centów
+- Obsługa USD — dolar/dolary/dolarów + cent/centy/centów
+- Obsługa GBP — funt/funty/funtów + pens/pensy/pensów
+- Komunikat błędu dla nieznanej waluty z listą dostępnych kodów
+- Rozbudowany arkusz testowy — 76 testów w 4 zakładkach (PLN, EUR, USD, GBP)
+
+### Zmieniono
+- Całkowita refaktoryzacja kodu — podział na 5 czytelnych sekcji
+- Nowa funkcja `LiczbaSlownie()` — reużywalna, niezależna od waluty
+- Nowa funkcja `PobierzWalute()` — słownik walut, łatwe dodawanie nowych
+- Zapis groszy zawsze jako ułamek z formą dopełniaczową (groszy/centów/pensów)
+- Usunięto `Private Type` — zastąpiono tablicami dla lepszej kompatybilności VBA
+
+---
 
 ## [1.0.1] - 2026-03-25
 
