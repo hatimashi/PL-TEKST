@@ -8,147 +8,108 @@
 
 ---
 
-## Opis
+## 📋 Opis
 
-**PL-TEKST** to darmowy dodatek do Microsoft Excel zawierający dwie funkcje:
+**PL-TEKST** to darmowy dodatek do Microsoft Excel, który dodaje funkcję `=PL_TEKST()` zamieniającą dowolną liczbę na jej zapis słowny w języku polskim — wraz z poprawną odmianą (złoty/złote/złotych, grosz/grosze/groszy, tysiąc/tysiące/tysięcy itd.).
 
-- **PL_TEKST()** — zapis kwoty z groszami jako ułamek, np. na przelewach i zestawieniach
-- **PL_TEKST_FAKTURA()** — pełny zapis słowny, np. na fakturach, umowach i dokumentach prawnych
-
-Obie funkcje obsługują waluty PLN, EUR, USD i GBP z poprawną polską odmianą.
-
----
-
-## Funkcja PL_TEKST
-
-Zapis kwoty z groszami jako ułamek (XX/100).
-
-```
-=PL_TEKST(kwota)
-=PL_TEKST(kwota; "waluta")
-```
-
-| Parametr | Opis |
-|---|---|
-| kwota | Kwota do zamiany (max 999 999 999,99) |
-| waluta | Opcjonalnie: PLN (domyślnie), EUR, USD, GBP |
+Funkcja przydatna przy generowaniu faktur, umów, czeków i innych dokumentów finansowych.
 
 ### Przykłady
 
 | Formuła | Wynik |
 |---|---|
-| =PL_TEKST(1) | Jeden złoty (00/100 groszy) |
-| =PL_TEKST(1234,67) | Tysiąc dwieście trzydzieści cztery złote (67/100 groszy) |
-| =PL_TEKST(21) | Dwadzieścia jeden złotych (00/100 groszy) |
-| =PL_TEKST(1000000) | Jeden milion złotych (00/100 groszy) |
-| =PL_TEKST(0) | Zero złotych (00/100 groszy) |
-| =PL_TEKST(1234,67; "EUR") | Tysiąc dwieście trzydzieści cztery euro (67/100 centów) |
-| =PL_TEKST(1234,67; "USD") | Tysiąc dwieście trzydzieści cztery dolary (67/100 centów) |
-| =PL_TEKST(1234,67; "GBP") | Tysiąc dwieście trzydzieści cztery funty (67/100 pensów) |
+| `=PL_TEKST(1)` | Jeden złoty (00/100 groszy) |
+| `=PL_TEKST(1234.67)` | Jeden tysiąc dwieście trzydzieści cztery złote (67/100 groszy) |
+| `=PL_TEKST(21)` | Dwadzieścia jeden złotych (00/100 groszy) |
+| `=PL_TEKST(1000000)` | Jeden milion złotych (00/100 groszy) |
+| `=PL_TEKST(0)` | Zero złotych (00/100 groszy) |
 
 ---
 
-## Funkcja PL_TEKST_FAKTURA
-
-Pełny zapis słowny kwoty z groszami zapisanymi słownie — przeznaczony do faktur, umów i dokumentów prawnych.
-
-```
-=PL_TEKST_FAKTURA(kwota)
-=PL_TEKST_FAKTURA(kwota; "waluta")
-```
-
-| Parametr | Opis |
-|---|---|
-| kwota | Kwota do zamiany (max 999 999 999,99) |
-| waluta | Opcjonalnie: PLN (domyślnie), EUR, USD, GBP |
-
-### Przykłady
-
-| Formuła | Wynik |
-|---|---|
-| =PL_TEKST_FAKTURA(1234,67) | Tysiąc dwieście trzydzieści cztery złote i sześćdziesiąt siedem groszy |
-| =PL_TEKST_FAKTURA(1000) | Tysiąc złotych i zero groszy |
-| =PL_TEKST_FAKTURA(0,01) | Zero złotych i jeden grosz |
-| =PL_TEKST_FAKTURA(1,01) | Jeden złoty i jeden grosz |
-| =PL_TEKST_FAKTURA(1234,67; "EUR") | Tysiąc dwieście trzydzieści cztery euro i sześćdziesiąt siedem centów |
-| =PL_TEKST_FAKTURA(1234,67; "USD") | Tysiąc dwieście trzydzieści cztery dolary i sześćdziesiąt siedem centów |
-| =PL_TEKST_FAKTURA(1234,67; "GBP") | Tysiąc dwieście trzydzieści cztery funty i sześćdziesiąt siedem pensów |
-
----
-
-## Instalacja
+## 🚀 Instalacja
 
 ### Metoda 1 — Dodatek .xlam (zalecana)
 
-1. Pobierz plik PL_TEKST.xlam z sekcji Releases
-2. W Excelu: Plik → Opcje → Dodatki → Przejdź
-3. Kliknij Przeglądaj i wskaż pobrany plik .xlam
-4. Zaznacz checkbox przy PL_TEKST → OK
-5. Obie funkcje są teraz dostępne we wszystkich plikach
+1. Pobierz plik `PL_TEKST.xlam` z sekcji [Releases](../../releases)
+2. W Excelu: **Plik → Opcje → Dodatki → Przejdź**
+3. Kliknij **Przeglądaj** i wskaż pobrany plik `.xlam`
+4. Zaznacz checkbox przy **PL_TEKST** → **OK**
+5. Funkcja `=PL_TEKST()` jest teraz dostępna we wszystkich plikach
 
-### Metoda 2 — Import modułów VBA
+### Metoda 2 — Import modułu VBA
 
-1. Pobierz pliki src/PL_TEKST.bas i src/PL_TEKST_FAKTURA.bas
-2. Otwórz Excel i naciśnij ALT + F11
-3. Prawy klik na projekt → Import File
-4. Zaimportuj najpierw PL_TEKST.bas, potem PL_TEKST_FAKTURA.bas
-5. Zapisz plik jako .xlsm
+1. Pobierz plik `src/PL_TEKST.bas`
+2. Otwórz Excel i naciśnij `ALT + F11`
+3. W edytorze VBA: prawy klik na projekt → **Import File**
+4. Wskaż plik `PL_TEKST.bas`
+5. Zapisz plik jako `.xlsm`
 
-### Metoda 3 — Personal Macro Workbook (funkcje globalne)
+### Metoda 3 — Personal Macro Workbook (funkcja globalna)
 
-1. Otwórz Excel i naciśnij ALT + F11
-2. W lewym panelu znajdź PERSONAL.XLSB → prawy klik → Insert → Module
-3. Wklej zawartość PL_TEKST.bas, utwórz drugi moduł i wklej PL_TEKST_FAKTURA.bas
-4. Zapisz (CTRL + S)
+Jeśli chcesz używać `=PL_TEKST()` we **wszystkich** plikach bez instalowania dodatku:
+
+1. Otwórz Excel i naciśnij `ALT + F11`
+2. W lewym panelu znajdź **PERSONAL.XLSB** → prawy klik → **Insert → Module**
+3. Wklej zawartość pliku `src/PL_TEKST.bas`
+4. Zapisz (`CTRL + S`)
 
 ---
 
-## Kody błędów
+## 📖 Użycie
+
+```
+=PL_TEKST(liczba)
+```
+
+| Parametr | Typ | Opis |
+|---|---|---|
+| `liczba` | Liczba | Kwota w złotych (max 999 999 999,99) |
+
+### Obsługiwane wartości
+- Liczby od `0` do `999 999 999,99`
+- Grosze zaokrąglane do 2 miejsc po przecinku
+- Liczby całkowite i dziesiętne
+
+### Kody błędów
 
 | Komunikat | Przyczyna |
 |---|---|
-| Blad: nieprawidlowa wartosc | Komórka zawiera tekst lub jest pusta |
-| Blad: ujemna liczba | Podano liczbę ujemną |
-| Blad: liczba zbyt duza | Przekroczono limit 999 999 999,99 |
-| Blad: nieznana waluta 'XXX' | Podano nieobsługiwany kod waluty |
+| `Blad: nieprawidlowa wartosc` | Komórka zawiera tekst lub jest pusta |
+| `Blad: ujemna liczba` | Podano liczbę ujemną |
+| `Blad: liczba zbyt duza` | Przekroczono limit 999 999 999,99 |
 
 ---
 
-## Roadmap
+## 🗺️ Roadmap
 
-- [x] v1.0.0 — podstawowa funkcja PLN
-- [x] v1.0.1 — poprawki odmiany i zaokrąglenia
-- [x] v2.0.0 — obsługa walut EUR, USD, GBP + refaktoryzacja
-- [x] v2.1.0 — funkcja PL_TEKST_FAKTURA (pełny zapis słowny)
-- [ ] v3.0.0 — API webowe (Python/FastAPI)
-- [ ] v3.1.0 — prosta aplikacja webowa
+- [x] v1.0 — podstawowa funkcja PLN
+- [ ] v1.1 — obsługa EUR, USD, GBP
+- [ ] v2.1 — format prawny dla faktur
+- [ ] v2.0 — API webowe (Python/FastAPI)
+- [ ] v2.1 — prosta aplikacja webowa
 
 ---
 
-## Współpraca
+## 🤝 Współpraca
 
 Pull requesty są mile widziane! Jeśli chcesz dodać nową walutę, poprawić odmianę lub dodać testy — śmiało.
 
-1. Zrób Fork repozytorium
-2. Stwórz branch: git checkout -b feature/nowa-waluta
-3. Zatwierdź zmiany: git commit -m 'Dodaj obsługę CHF'
-4. Wypchnij: git push origin feature/nowa-waluta
-5. Otwórz Pull Request
+1. Zrób **Fork** repozytorium
+2. Stwórz branch: `git checkout -b feature/nowa-waluta`
+3. Zatwierdź zmiany: `git commit -m 'Dodaj obsługę EUR'`
+4. Wypchnij: `git push origin feature/nowa-waluta`
+5. Otwórz **Pull Request**
 
 ---
 
-## Licencja
+## 📄 Licencja
 
-MIT — używaj swobodnie, także komercyjnie.
+[MIT](LICENSE) — używaj swobodnie, także komercyjnie.
 
 ---
 
-## English summary
+## 🇬🇧 English summary
 
-**PL-TEKST** is a free VBA add-in for Microsoft Excel that converts monetary amounts to Polish words, including correct grammatical inflection for PLN, EUR, USD and GBP currencies.
+**PL-TEKST** is a free VBA add-in for Microsoft Excel that converts numbers to Polish words, including correct grammatical inflection. Useful for invoices, contracts, and financial documents in Polish.
 
-Two functions available:
-- PL_TEKST() — amount with fractional cents notation (e.g. "67/100 groszy")
-- PL_TEKST_FAKTURA() — full word notation for legal documents (e.g. "szescdziesiat siedem groszy")
-
-Install via .xlam add-in or import .bas modules directly into your VBA project.
+Install via `.xlam` add-in or import `PL_TEKST.bas` directly into your VBA project.
