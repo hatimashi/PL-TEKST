@@ -7,6 +7,28 @@ Projekt stosuje [Semantic Versioning](https://semver.org/lang/pl/).
 
 ---
 
+## [3.1.0] - 2026-03-26
+
+### Dodano
+- Kalkulator online dostępny pod adresem https://primestep.pl/excel-polish-text-from-value/
+- Widget HTML/CSS/JavaScript do osadzenia na dowolnej stronie www
+- Obsługa formatu standardowego i faktury/umowy w jednym widgecie
+- Przycisk kopiowania wyniku do schowka
+- Animacja ładowania podczas zapytania do API
+- Obsługa błędów w interfejsie użytkownika
+- Badge Demo w README z linkiem do kalkulatora online
+
+### Zmieniono
+- Zaktualizowano README — dodano sekcję Demo i link do kalkulatora
+- Zaktualizowano badge wersji do 3.1.0
+- Roadmap w pełni zrealizowany
+
+---
+
+
+
+---
+
 ## [2.1.0] - 2026-03-26
 
 ### Dodano
