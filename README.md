@@ -6,6 +6,7 @@
 [![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](CHANGELOG.md)
 [![Excel](https://img.shields.io/badge/Microsoft%20Excel-2010%2B-green.svg)]()
 [![API](https://img.shields.io/badge/API-Railway-blueviolet.svg)](https://pl-tekst-production.up.railway.app/docs)
+[![Mobile](https://img.shields.io/badge/Mobile-Expo-black.svg)](https://github.com/hatimashi/PL-TEKST-App)
 
 ---
 
@@ -17,7 +18,7 @@
 - **=PL_TEKST_FAKTURA()** — funkcja Excel, pełny zapis słowny dla dokumentów prawnych
 - **REST API** — publiczne API dostępne online
 
-Wszystko obsługuje waluty PLN, EUR, USD i GBP z poprawną polską odmianą.
+Wszystko obsługuje waluty PLN, EUR, USD i GBP z poprawną polską odmianą. Dostępne również jako [aplikacja mobilna](https://github.com/hatimashi/PL-TEKST-App) na Android i iOS.
 
 ---
 
@@ -174,7 +175,8 @@ Content-Type: application/json
 - [x] v2.0.0 — obsługa walut EUR, USD, GBP + refaktoryzacja
 - [x] v2.1.0 — funkcja PL_TEKST_FAKTURA (pełny zapis słowny)
 - [x] v3.0.0 — publiczne REST API (Python/FastAPI + Railway)
-- [ ] v3.1.0 — prosta aplikacja webowa
+- [x] v3.1.0 — prosta aplikacja webowa
+- [x] v3.2.0 — aplikacja mobilna React Native / Expo (Android i iOS)
 
 ---
 
